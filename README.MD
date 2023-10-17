@@ -15,7 +15,7 @@
 ### 正则化
 - L1正则化<br>
 L1正则化的多元逻辑回归模型的损失函数为：
-![L1.png](image%2FL1.png)
+![L1.png](<image/L1.png>)
 导数为：
 ![L1gradient.png](image%2FL1gradient.png)
 L2正则化<br>
