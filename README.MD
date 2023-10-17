@@ -15,20 +15,20 @@
 ### 正则化
 - L1正则化<br>
 L1正则化的多元逻辑回归模型的损失函数为：
-<img src="image/L1.png" alt="">
+![L1.png](image%2FL1.png)
 导数为：
-<img src="image/L1gradient.png" alt="">
+![L1gradient.png](image%2FL1gradient.png)
 L2正则化<br>
 L2正则化的多元逻辑回归模型的损失函数为：
-<img src="image/L2.png" alt="">
+![L2.png](image%2FL2.png)
 导数为：
-<img src="image/L2gradient.png" alt="">
+![L2gradient.png](image%2FL2gradient.png)<img src="image/L2gradient.png" alt="">
 
 ### 牛顿法
 牛顿法函数公式为
-<img src="image/newton.png" alt="">
+![newton.png](image%2Fnewton.png)
 二阶导数，即Hessian矩阵为：
-<img src="image/Hessian.png" alt="">
+![Hessian.png](image%2FHessian.png)
 矩阵形式为：
-<img src="image/newton_matrix.png" alt="">
+![newton_matrix.png](image%2Fnewton_matrix.png)
 
