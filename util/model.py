@@ -154,7 +154,7 @@ class Regular:
         self.__lamda = lamda
         self.__method = method
 
-    def __call__(self, weights)->float:
+    def __call__(self, weights) -> float:
         if self.__method.upper() == "L2":
             return self.__lamda * np.sum(weights) / len(weights)
         elif self.__method.upper() == "L1":
