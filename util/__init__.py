@@ -23,13 +23,13 @@ DATA_NAME = {
 
 
 class MNIST:
-    def __init__(self, root="data/MNIST/raw", transform=None):
+    def __init__(self, root="data", transform=None):
         self.__train_images = None
         self.__train_labels = None
         self.__test_images = None
         self.__test_labels = None
         self.__transform = transform
-        self.__root = root
+        self.__path = pathlib.Path(root, "MNIST/raw")
 
     @property
     def train_images(self):
@@ -58,8 +58,8 @@ class MNIST:
         return self.__test_labels
 
     def load_data(self, name):
-        assert pathlib.Path(self.__root, name).exists()
-        with open(pathlib.Path(self.__root, name), "rb") as f:
+        assert pathlib.Path(self.__path, name).exists(), f"{pathlib.Path(self.__path, name)} not exists"
+        with open(pathlib.Path(self.__path, name), "rb") as f:
             data = f.read()
             magic = self.get_int(data[0:4])
             nd = magic % 256  # nd表示维度
