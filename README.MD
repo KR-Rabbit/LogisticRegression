@@ -2,7 +2,7 @@
 
 ### 项目结构
 
-```
+<pre>
 ├── data
 │   ├── MNIST 手写数字数据集
 │   ├── data/breast_cancer_wisconsin.xlsx 乳腺癌数据集
@@ -13,39 +13,39 @@
 ├── LogisticRegression.ipynb 逻辑回归模型
 ├── MultiLogisticRegression.ipynb 多分类逻辑回归模型
 └── Newton.ipynb 牛顿法求解逻辑回归模型
-```
+</pre>
 
 ### 正则化
 
 - L1正则化<br>
   L1正则化的多元逻辑回归模型的损失函数为：
 
-$$
-J(θ）= \frac{1}{m}\sum_{i=1}^m[y^{(i)}log\{3h_{\theta}(x^{(i)}\}+(1-y^{(i)})log\{1-h_\theta(x^{(i)}\}]
-+\frac{\lambda}{2m}\sum_{j=1}^n|\theta_j|
-$$
+  $$
+  J(θ）= \frac{1}{m}\sum_{i=1}^my^{(i)}log\left( h_\theta(x^{(i)}) \right)
+  +\frac{\lambda}{m}\sum_{j=1}^n|\theta_j|
+  $$
 
-导数为：
+  导数为：
 
-$$
-\frac{\partial J}{\partial \theta_j} = \frac{1}{m}\sum_{i=1}^m[h_\theta(x^{(i)})-y^{(i)}]x_j^{(i)
-}+\frac{\lambda}{m}sign(\theta_j)
-$$
+  $$
+  \frac{\partial J}{\partial \theta_j} = \frac{1}{m}\sum_{i=1}^m[h_\theta(x^{(i)})-y^{(i)}]x_j^{(i)
+  }+\frac{\lambda}{m}sign(\theta_j)
+  $$
 
-L2正则化
-L2正则化的多元逻辑回归模型的损失函数为：
+- L2正则化
+  L2正则化的多元逻辑回归模型的损失函数为：
 
-$$
-J(\theta)=-\frac1m\sum_{i=1}^m\sum_{k=1}^Ky_k^{(i)}log\frac{e^{\theta_k^Tx^{(i)}}}{\sum_{j=1}^Ke^{\theta_j^Tx^{(i)
-}}}+\frac\lambda{2m}\sum_{j=1}^K\sum_{k=0}^n\theta_{jk}^2
-$$
+  $$
+  J(\theta)=-\frac1m\sum_{i=1}^m\sum_{k=1}^Ky_k^{(i)}log\frac{e^{\theta_k^Tx^{(i)}}}{\sum_{j=1}^Ke^{\theta_j^Tx^{(i)
+  }}}+\frac\lambda{2m}\sum_{j=1}^K\sum_{k=0}^n\theta_{jk}^2
+  $$
 
-导数为：
+  导数为：
 
-$$
-\begin{aligned}\frac{\partial J}{\partial\theta_j}&=\frac{1}{m}\sum_{i=1}^m\Big(h_\theta(x^{(i)})-y^{(i)}\Big)x_j^{(i)
-}+\frac{\lambda}{m}\theta_j\end{aligned}
-$$
+  $$
+  \begin{aligned}\frac{\partial J}{\partial\theta_j}&=\frac{1}{m}\sum_{i=1}^m\Big(h_\theta(x^{(i)})-y^{(i)}\Big)x_j^{(i)
+  }+\frac{\lambda}{m}\theta_j\end{aligned}
+  $$
 
 ### 牛顿法
 
