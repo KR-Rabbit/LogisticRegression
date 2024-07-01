@@ -21,8 +21,7 @@
   L1正则化的多元逻辑回归模型的损失函数为：
 
   $$
-  J(θ）= \frac{1}{m}\sum_{i=1}^my^{(i)}log\left( h_\theta(x^{(i)}) \right)
-  +\frac{\lambda}{m}\sum_{j=1}^n|\theta_j|
+J(θ）= \frac{1}{m}\sum_{i=1}^m{y^{(i)}log\left( h_\theta(x^{(i)}) \right)+\frac{\lambda}{m}\sum_{j=1}^n|\theta_j|}
   $$
 
   导数为：
